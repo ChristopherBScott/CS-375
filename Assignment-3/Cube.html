@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="initShaders.js"></script>
+<script type="text/javascript" src="Cube.js"></script>
+<script type="text/javascript" src="helpers.js"></script>
+<script type="text/javascript" src="MV.js"></script>
+<script type="text/javascript" src="MatrixStack.js"></script>
+
+<script id="Cube-vertex-shader" type="x-shader/x-vertex">
+    in vec4 aPosition;
+
+    out vec4 vColor;
+
+    uniform mat4 MV;
+
+    uniform mat4 P;
+    
+    void main()
+    {
+        vColor = 0.5 + aPosition;
+        gl_Position = P * MV * aPosition;
+    }
+</script>
+<script id="Cube-fragment-shader" type="x-shader/x-fragment">
+    
+    in vec4 vColor;
+    out vec4 fColor;
+
+    void main()
+    {
+        vec4 backColor = vec4(1.0,0.0,1.0,1.0);
+        fColor = gl_FrontFacing ? 
+            vColor : backColor;
+    }
+</script>
+<canvas id="webgl-canvas" width="512" height="512"></canvas>
