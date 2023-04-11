@@ -4,7 +4,7 @@ I think I could fairly easily implement the idea we discussed last week after cl
   
   
 # Schedule:
-⋅⋅* Week 1 - Create basic planet model and find images of planetary maps
-⋅⋅* Week 2 - create scene and set up projection
-⋅⋅* Week 3 - animate objects, set up lighting, improve shading
-⋅⋅* Week 4 - final polish and presentation preparation
+  * Week 1 - Create basic planet model and find images of planetary maps
+  * Week 2 - create scene and set up projection
+  * Week 3 - animate objects, set up lighting, improve shading
+  * Week 4 - final polish and presentation preparation
